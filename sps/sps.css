@@ -1,0 +1,86 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    background-color: #272D38;
+}
+
+#about-sps{
+    padding-top: 70px;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(56, 65, 80, 0.600);
+}
+
+#about-sps>.row{
+    max-width: 600px;
+    margin: auto;
+}
+
+#outcomes-info{
+    margin-top: 20px;
+}
+
+#start-btn{
+    width: 100%;
+}
+
+#section-2{
+    display: none;
+    background-color: #272D38;
+    height:auto;
+}
+
+
+
+#human-display{
+    border-right: 1px solid rgb(102, 126, 234);
+}
+
+#human-display>p:nth-child(1),#computer-display>p:nth-child(1){
+    color: rgb(102, 126, 234)
+}
+
+#human-display>p:nth-child(1),#computer-display>p:nth-child(1){
+    color: rgb(102, 126, 234)
+}
+
+
+
+#result{
+    font-size: 25px;
+    color: rgb(94, 107, 128);
+}
+
+#dummy-score{
+    color:rgb(102, 126, 234);
+    font-size: 30px;
+}
+.btn{
+    color: white;
+    background-color: rgb(102, 126, 234);
+    padding: 10px 20px;
+    user-select: none;
+    border: 1px solid white;
+}
+#btn4{
+    color: rgba(102, 126, 234);
+    background-color: transparent;
+    border: 1px solid #e2e8f0;
+    margin: 15px 0px 60px;
+}
+
+
+
+
+@media screen and (max-width:315px) {
+    #user-controls-small-screen{
+        flex-direction: column;
+    }
+    .btn{
+        margin: 0px 100%;
+    }
+}
+
+
