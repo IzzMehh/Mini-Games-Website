@@ -74,7 +74,7 @@ body{
     -webkit-user-select: none;
     -ms-user-select: none;
     -moz-user-select: none;
-    border-bottom: 2px solid #223847;
+    border-bottom: 1px solid #223847;
     z-index: 2;
 }
 
