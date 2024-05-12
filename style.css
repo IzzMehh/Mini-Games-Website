@@ -6,7 +6,7 @@
 :root{
     --text-col: white;
     --bg-col: #020202;
-    /* --cash-bg-col:transparent; */
+    --cash-bg-col:transparent;
     /* --cash-bg-col: #151717ce; */
     --card-col: #0F1011;
     /* --slider-col:#110f16; */
@@ -465,24 +465,12 @@ body{
         left: 105%;
     }
 
-    #cashAmount{
-        height: 100%;
-        width: 130px;
-        /* margin: 0px; */
-        color: var(--text-col);
-        background-color:var(--cash-bg-col);
-        border: none;
-        outline: none;
-        /* align-content: normal; */
-        font-family: 'roboto','san-sarif';
-    }
-    
 
     #cashAmount{
         height: 60px;
         width: 170px;
         margin: auto;
-        color: var(--text-col);
+        color: white;
         background-color:var(--cash-bg-col);
         border: none;
         outline: none;
@@ -497,7 +485,7 @@ body{
         height: 60px;
         width: 135px;
         margin: auto;
-        color: var(--text-col);
+        color: white;
         background-color:var(--cash-bg-col);
         border: none;
         outline: none;
@@ -512,7 +500,7 @@ body{
         height: 60px;
         width: 135px;
         margin: 0px;
-        color: var(--text-col);
+        color: white;
         background-color:var(--cash-bg-col);
         border: none;
         outline: none;
