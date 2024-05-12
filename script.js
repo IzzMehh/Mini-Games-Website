@@ -69,15 +69,17 @@ const mobileFooter = document.querySelector('#footer-row')
 
 if(storedData.profile.theme === 'blue'){
   mainSection.classList.replace('section-2-dark','section-2-blue');
-  document.documentElement.style.setProperty('--bg-col', '#1A2C38');
-  document.documentElement.style.setProperty('--cash-bg-col', '#273b47ce');
+  document.documentElement.style.setProperty('--bg-col', '#042233');
+  // document.documentElement.style.setProperty('--cash-bg-col', '#273b47ce');
+  document.documentElement.style.setProperty('--card-col', '#0F1011');
   mobileFooter.style.backgroundColor = '#182030';
+  mobileFooter.style.backgroundColor = 'transparent';
 
 }
 else if (storedData.profile.theme === 'dark'){
   mainSection.classList.replace('section-2-blue','section-2-dark');
-  document.documentElement.style.setProperty('--bg-col', 'black');
-  document.documentElement.style.setProperty('--cash-bg-col', '#151717ce'); 
+  document.documentElement.style.setProperty('--bg-col', '#020202');
+  // document.documentElement.style.setProperty('--cash-bg-col', '#151717ce'); 
   mobileFooter.style.backgroundColor = 'rgba(49, 47, 47, 0.693)';
 }
 
@@ -222,9 +224,8 @@ const cardDescription = document.querySelectorAll('.discription')
 function themeToggle(){
   if(storedData.profile.theme=='blue'){
     mainSection.classList.replace('section-2-blue','section-2-dark');
-    document.documentElement.style.setProperty('--bg-col', 'black');
-    document.documentElement.style.setProperty('--cash-bg-col', '#151717ce');
-    document.body.style.transition = 'all 500ms linear'
+    document.documentElement.style.setProperty('--bg-col', '#020202');
+    document.documentElement.style.setProperty('--cash-bg-col', '#151717ce'); 
     
     storedData.profile.theme = 'dark'
     localStorage.setItem('settings',JSON.stringify(storedData))
@@ -244,8 +245,10 @@ function themeToggle(){
   }
   else if(storedData.profile.theme=='dark'){
     mainSection.classList.replace('section-2-dark','section-2-blue');
-    document.documentElement.style.setProperty('--bg-col', '#1A2C38');
+    document.documentElement.style.setProperty('--bg-col', '#042233');
     document.documentElement.style.setProperty('--cash-bg-col', '#273b47ce');
+    document.documentElement.style.setProperty('--card-col', '#0F1011');
+
     document.body.style.transition = 'all 500ms linear'
     
     storedData.profile.theme = 'blue'

@@ -110,7 +110,6 @@ let startBtn = document.querySelector('#start-btn')
 startBtn.addEventListener('click', () =>{
     document.querySelector('#about-sps').style.display='none';
     document.querySelector('#section-2').style.display = 'block';
-
 })
 
 
