@@ -17,8 +17,15 @@
     <div class="loader"></div>
   </div>
 
-
-
+  <div class="container slide-property-hide" id="side-bar">
+    <div class="row" id="slider-content">
+      <div class="col-10 m-auto"><a href="index.html"><button id="home-btn" class="slider-tab-btn">Home</button></a></div>
+      <div class="col-10 m-auto"><a href="games.html"><button id="game-btn" class="slider-tab-btn active">Games</button></a></div>
+      <div class="col-10 m-auto"><a href="about.html" style="text-decoration: none;"><button id="about-btn" class="slider-tab-btn">About</button></a></div>   
+      <div class="col-10 m-auto"><button id="theme-toggle-btn" class="slider-tab-btn">Change Theme</button></div>
+      <div class="col-10 m-auto"><button id="feedback-btn" class="slider-tab-btn">Feed back</button></div>
+    </div>
+  </div>
     
   <div class="container-fluid" id="nav-bar">
     <div class="row">
@@ -32,15 +39,6 @@
         </div>
     </div>
   </div>
-
-      <div class="container slide-property-hide" id="side-bar">
-        <div class="row" id="slider-content">
-          <div class="col-10 m-auto"><a href="index.html" style="text-decoration: none;"><button id="home-btn" class="slider-tab-btn">Home</button></a></div>
-          <div class="col-10 m-auto"><a href="about.html" style="text-decoration: none;"><button id="about-btn" class="slider-tab-btn">About</button></a></div>        
-          <div class="col-10 m-auto"><button id="theme-toggle-btn" class="slider-tab-btn">Change Theme</button></div>
-          <div class="col-10 m-auto"><button id="feedback-btn" class="slider-tab-btn">Feed back</button></div> 
-        </div>
-      </div>
 
       <div class="container-fluid" id="about-mines">
         <div class="row">
@@ -77,13 +75,13 @@
                 </li>
               </ol>
             </div>
-            <div class="col-6 m-auto"><button type="button" id="start-btn" class="btn btn-outline-success">Start !</button></div>        
+            <div class="col-6 m-auto"><button type="button" id="start-btn" class="btn">Start !</button></div>        
           </div>
         </div>
 
       
       <div class="container-fluid section-2-dark"style="background-image: none; " id="section-2">
-        <div class="row" id="main-section-row" style="background-color: rgb(33, 55, 67);">
+        <div class="row" id="main-section-row">
           <!-- section part 1 -->
             <div class="col-lg-4 col-8 order-lg-0 order-2" id="user-controls">
                 <div class="row">
@@ -220,11 +218,12 @@
 
 
 
-        
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="mine/mine.js"></script>
-    <script src="script.js"></script>
+   
+    <script src="utility/database.js"></script>
+    <script type="module" src="utility/script.js"></script>
+    <script type="module" src="mine/src/utility/mine.js"></script>
 </body>
 </html>
