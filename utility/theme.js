@@ -25,10 +25,11 @@ if(accountStoredData.userData.theme === 'light'){
     document.documentElement.style.setProperty('--slider-col', '#554C4C');
     document.documentElement.style.setProperty('--btn-col', '#6B5E5E');
     document.documentElement.style.setProperty('--border-col', 'white');
-    // mobileFooter.style.backgroundColor = 'rgba(49, 47, 47, 0.693)';
+    
+    mobileFooter.style.backgroundColor = 'rgba(49, 47, 47, 0.693)';
 
     
-    mobileFooter.style.backgroundColor = 'transparent';
+    // mobileFooter.style.backgroundColor = 'transparent';
   }
 }
 
@@ -46,8 +47,8 @@ export function themeToggle(){
     localStorage.setItem('settings',JSON.stringify(accountStoredData))
 
 
-    mobileFooter.style.backgroundColor = 'transparent'
-    // mobileFooter.style.backgroundColor = 'rgba(49, 47, 47, 0.693)';
+    // mobileFooter.style.backgroundColor = 'transparent'
+    mobileFooter.style.backgroundColor = 'rgba(49, 47, 47, 0.693)';
 
   }
   else if(accountStoredData.userData.theme=='dark'){
