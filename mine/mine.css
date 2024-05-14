@@ -234,6 +234,11 @@ body{
 }
 
 @media screen and (max-width:992px) {
+
+    #mines-div{
+        max-width:80%;
+    }
+    
     #multiply{
         font-size: 25px;
         width: 80px;
