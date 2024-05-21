@@ -131,6 +131,9 @@ body{
 }
 
 #mines-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--card-col);
     padding: 0px !important;
     position: relative;
@@ -191,6 +194,9 @@ body{
 #mine-input{
     cursor: pointer;
 }
+
+
+
 #game-covering{
     opacity: 0.4;
     display: none;
@@ -199,18 +205,14 @@ body{
     background-color: black;
     width: 100%;
     height: 100%;
-    align-content: center;
 }
 #game-result{
     display: none;
     position: absolute;
-    top: 40%;
-    left: 35%;
-    height: 150px;
-    width: 200px;
-    margin: auto;
+    height: 25%;
+    width: 30%;
     background-color: var(--btn-col);
-    z-index: 1;
+    z-index: 2;
     opacity: 1;
     border: 5px solid var(--border-col);
     border-radius: 20px;
@@ -248,12 +250,6 @@ body{
         width: 100px;
         font-size: 15px;
     }
-    #game-result{
-        top: 40%;
-        left: 4 0%;
-        height: 150px;
-        width: 200px;
-    }
     
     #user-controls{
         margin: 10px auto 50px;
@@ -278,21 +274,5 @@ body{
     }
     .amount-contaner{
         margin: 0px !important;
-    }
-}
-
-@media screen and (max-width:333px) {
-    #game-result{
-        top: 30%;
-        left: 25%;
-        width: 50%;
-    }
-}
-
-@media screen and (max-width:575px) {
-    #game-result{
-        top: 30%;
-        left: 25%;
-        width: 50%;
     }
 }
