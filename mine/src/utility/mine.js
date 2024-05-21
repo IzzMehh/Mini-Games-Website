@@ -9,8 +9,6 @@ let mineDataStored = accountStoredData
 
  
 
-
-
 //  
 
 export let totalAmountWon = 0;
@@ -63,9 +61,7 @@ startBtn.addEventListener('click', () =>{
 
   
   
-  function updateBalance(){
-      displayCash.innerHTML = `<img id='nav-currency-logo' height="20px" src="images/currency-logo.jpg" alt=""> ${mineDataStored.userData.amount} Coins`
-  }
+
   
   
 
@@ -199,7 +195,7 @@ startBtn.addEventListener('click', () =>{
       localStorage.setItem('settings', JSON.stringify(mineDataStored))
         
         
-        updateBalance()
+         updateDisplayedCoins()
 
         endLogic = true
 
@@ -257,7 +253,6 @@ onstart()
   }
   
 
-  const betDiv = document.querySelector('#bets-number')
   const autoBtn = document.querySelector('#auto-btn')
   const manualBtn = document.querySelector('#manual-btn')
   
@@ -333,7 +328,7 @@ onstart()
     localStorage.setItem('settings', JSON.stringify(mineDataStored))
 
     
-    updateBalance()
+     updateDisplayedCoins()
   }
 
   

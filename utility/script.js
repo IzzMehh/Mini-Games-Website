@@ -7,36 +7,14 @@ const sliderButtons = document.querySelectorAll('.slider-tab-btn')
 
 
 import { redirect} from "./redirects.js"
-
 import { themeToggle,storedTheme } from "./theme.js"
-
 import { showSliderBar, hideSliderBar } from "./sidebar.js"
-
-
 import { saveDataBeforeUnload } from "./saveData.js"
-
-
+import { preLoader } from "./preloader.js"
 
 redirect()
-
 storedTheme()
-
-
-
-
-// LOADER 
-
-let loader = document.querySelector('.preloader')
-
-window.addEventListener('load', ()=> {
-  
-  loader.style.display = 'none'
-  
-})
-
-// displaying User Profile ---
-
-
+preLoader()
 
 const showPercentage = document.querySelector('#show-range')
 
