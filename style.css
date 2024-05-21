@@ -82,7 +82,7 @@ body{
     -ms-user-select: none;
     -moz-user-select: none;
     /* border-bottom: 1px solid #223847; */
-    z-index: 2;
+    z-index: 23;
 }
 
 .slide-property-show{

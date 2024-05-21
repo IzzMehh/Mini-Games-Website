@@ -284,15 +284,6 @@ body{
         max-width: 100%;
     }
 
-    #multiply{
-        font-size: 25px;
-        width: 80px;
-        margin-bottom: 10px;
-    }
-    #winning-amount{
-        width: 100px;
-        font-size: 15px;
-    }
 
     
     #user-controls{
@@ -332,5 +323,20 @@ body{
         max-height: 70px;
         min-width: 70px;
         border-radius: 10px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    #game-result{
+        height: 120px;
+        width: 160px;
+    }
+     
+    #multiply{
+        font-size: 20px;
+    }
+    #winning-amount{
+        font-size: 10px;
     }
 }

@@ -35,3 +35,14 @@ catch(e){
 }
 }
 
+
+const quiz = document.querySelector('#quiz')
+
+try{
+  quiz.addEventListener('click',()=>{
+    window.location.assign('quiz.html')
+})
+}
+catch(e){
+  console.log(e)
+}
