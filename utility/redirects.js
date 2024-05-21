@@ -1,6 +1,4 @@
 const sps = document.querySelector('#sps')
-const mines = document.querySelector('#mines')
-
 
 export function redirect(){
 try{
@@ -13,6 +11,7 @@ catch(e){
 }
 
 
+const mines = document.querySelector('#mines')
 
 try{
   mines.addEventListener('click',()=>{
@@ -22,4 +21,17 @@ try{
 catch(e){
   console.log(e)
 }
+
+
+const kino = document.querySelector('#keno')
+
+try{
+  kino.addEventListener('click',()=>{
+    window.location.assign('keno.html')
+})
 }
+catch(e){
+  console.log(e)
+}
+}
+

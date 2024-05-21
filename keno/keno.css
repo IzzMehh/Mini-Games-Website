@@ -3,21 +3,18 @@
 }
 body{
     background-color:var(--bg-col);
-    height: 100%;
-}
-::-webkit-scrollbar {
-    display: none;
+    height: auto;
+    user-select: none;
 }
 
-#about-mines{
-    display: block;
+#about-kino{
     padding-top: 70px;
     height: 100%;
     background-color: var(--bg-col)
 }
 
-#about-mines>.row{
-    max-width: 600px;
+#about-kino>.row{
+    max-width: 670px;
     margin: auto;
 }
 
@@ -41,7 +38,7 @@ body{
 
 
 #game-type{
-    display: flex;
+   display: flex;
 }
 
 #btn-container{
@@ -61,6 +58,7 @@ body{
     cursor: pointer;
     margin: 0px;
     width: 50%;
+    user-select: none;
 }
 
 .game-type-btn:hover{
@@ -111,8 +109,8 @@ body{
     padding: 5px 0px;
 }
 
-#bet-btn,#checkout-btn{
-    background-color: rgb(31, 255, 32);
+.bet-btn-default{
+    background-color: rgb(22, 119, 22);
     width: 90%;
     outline: none;
     padding: 15px 28px;
@@ -120,48 +118,53 @@ body{
     border: none;
     border-radius: 5px;
     font-family: "Noto Sans", sans-serif;
+    cursor:not-allowed !important;
 }
 
-#checkout-btn{
-    display: none;
+.bet-button-active{
+    background-color: rgb(31, 255, 32);
+    cursor:pointer !important;
 }
 
-#bet-btn:hover{
+.bet-button-active:hover{
     background-color: rgb(27, 236, 27);
 }
 
-#mines-container{
+#box-container{
+    height: 100%;
     background-color: var(--card-col);
     padding: 0px !important;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#mines-div{
+#box-div{
     position: relative;
     display: grid;
-    margin: 0px auto;
-    grid-template-columns: repeat(5,auto);
+    margin: auto;
+    grid-template-columns: repeat(8,auto);
     grid-template-rows: repeat(5,auto);
-    gap:12px 14px;
-    width: 610px;
-    max-width: 610px;
+    gap:10px;
+    width: 90%;
     padding: 20px 0px;
 }
 
 .box{
+    user-select: none;
+    font-family: 'roboto';
+    font-weight: 900;
+    font-size: 25px;
+    align-content: center;
+    text-align: center;
     cursor: pointer;
-    height: 110px;
-    width: 110px;
-    background-color: var(--btn-col);
-    box-shadow:  #898686 0px 7.19988px 0px 0px;
+    height: 88px;
+    width: 100%;
+    max-height: 90px;
+    max-width: 100%;
     border-radius: 10px;
-}
-
-.box:hover{
-    background-color: #d3d1d1;
-    transform: scale(1.09);
-    transform: translateY(-5px);
-}
+}   
 
 #user-controls{
     background-color: var(--bg-col);
@@ -191,24 +194,12 @@ body{
 #mine-input{
     cursor: pointer;
 }
-#game-covering{
-    opacity: 0.4;
-    display: none;
-    position: absolute;
-    z-index: 1;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    align-content: center;
-}
+
 #game-result{
     display: none;
-    position: absolute;
-    top: 40%;
-    left: 35%;
+    position: relative;
     height: 150px;
     width: 200px;
-    margin: auto;
     background-color: var(--btn-col);
     z-index: 1;
     opacity: 1;
@@ -217,6 +208,11 @@ body{
     align-content: center;
     text-align: center;
 }
+
+#game-covering{
+    position: absolute;
+}
+
 #multiply{
     margin: auto;
     font-size: 30px;
@@ -233,12 +229,61 @@ body{
     cursor: pointer;
 }
 
-@media screen and (max-width:992px) {
+.box-default{
+    background-color: var(--btn-col);
+    box-shadow: #898686 0px 7.19988px 0px 0px;
+}
 
-    #mines-div{
-        max-width:80%;
-    }
+.box-default:hover{
+    background-color: #d3d1d1;
+    transform: scale(1.09);
+    transform: translateY(-5px);
+}
+
+.box-selected{
+    background-Color : rgb(176, 97, 255);
+    box-Shadow : 0px 7.19988px rgb(144, 0, 255);
+}
+
+.box-selected-computer{
+    box-shadow: inset 0 0.3em #0E0303;
+    color: rgb(233, 17, 60);
+    background-color: #270808;
+}
+
+.box-matched{
+    background-image : url('../keno/img/emerald.png');
+    background-repeat : no-repeat;
+    background-position : center;
+    background-size : 80%;
+    background-color : #8618F4;
+    box-shadow : #8618F4 0px 7.19988px 0px 0px;
+    color: white;
+}
+
+
+.box-selected:hover{
+    background-color: #AE69F2;
+    transform: scale(1.09);
+    transform: translateY(-5px);
+}
+
+
+@media screen and (max-width:1200px) {
     
+    #box-container{
+        height: 100%;
+    }
+
+    #box-div{
+        width:90%;
+        gap: 10px;
+    }
+    .box{
+        max-height: 100%;
+        max-width: 100%;
+    }
+
     #multiply{
         font-size: 25px;
         width: 80px;
@@ -248,26 +293,13 @@ body{
         width: 100px;
         font-size: 15px;
     }
-    #game-result{
-        top: 40%;
-        left: 4 0%;
-        height: 150px;
-        width: 200px;
-    }
+
     
     #user-controls{
         margin: 10px auto 50px;
     }
     #mines-container{
         padding: 0px !important;
-        width: 100%;
-    }
-    #mines-div{
-        display: grid;
-        margin: 20px auto;
-        grid-template-columns: repeat(5,auto);
-        grid-template-rows: repeat(5,auto);
-        gap:12px 2px;
         width: 100%;
     }
     .box{
@@ -281,18 +313,24 @@ body{
     }
 }
 
-@media screen and (max-width:333px) {
-    #game-result{
-        top: 30%;
-        left: 25%;
-        width: 50%;
-    }
-}
 
-@media screen and (max-width:575px) {
-    #game-result{
-        top: 30%;
-        left: 25%;
-        width: 50%;
+@media screen and (max-width:900px) {
+    #box-div{
+        position: relative;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(8,auto);
+        grid-template-rows: repeat(5,auto);
+        gap:5px;
+        overflow: auto;
+        padding: 20px 0px;
+    }
+    
+    .box{
+        border-radius: 20px !important;
+        cursor: pointer;
+        max-height: 70px;
+        min-width: 70px;
+        border-radius: 10px;
     }
 }
