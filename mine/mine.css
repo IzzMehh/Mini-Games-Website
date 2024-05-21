@@ -206,11 +206,12 @@ body{
     width: 100%;
     height: 100%;
 }
+
 #game-result{
     display: none;
     position: absolute;
-    height: 25%;
-    width: 30%;
+    height: 150px;
+    width: 200px;
     background-color: var(--btn-col);
     z-index: 2;
     opacity: 1;
@@ -236,6 +237,7 @@ body{
 }
 
 @media screen and (max-width:992px) {
+
 
     #mines-div{
         max-width:80%;
@@ -275,4 +277,22 @@ body{
     .amount-contaner{
         margin: 0px !important;
     }
+}
+
+
+@media screen and (max-width:390px) {
+    
+#game-result{
+    height: 120px;
+    width: 150px;
+}
+
+#multiply{
+    margin: auto;
+    font-size: 20px;
+}
+#winning-amount{
+    margin: auto;
+    font-size: 10px;
+}
 }
