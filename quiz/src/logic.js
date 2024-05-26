@@ -11,13 +11,9 @@ export function logic(questionArray, apiData){
 
     if(isGameStarted){
 
-    console.log(questionArray)
-    console.log(apiData)
-
     optionArray = []
 
     shuffle(optionArray, questionArray, apiData)
-    console.log(optionArray)
 
     const questionHtml = `
     <div class="q-wrapper">
