@@ -320,8 +320,8 @@ body{
     .box{
         border-radius: 20px !important;
         cursor: pointer;
-        max-height: 70px;
-        min-width: 70px;
+        max-height: 60px;
+        min-width: 60px;
         border-radius: 10px;
     }
 

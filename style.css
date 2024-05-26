@@ -1,5 +1,11 @@
 *{
     margin: 0;padding: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -73,6 +79,60 @@ body{
 /* .... */
 
 /*  */
+  
+.feedback-dialog::backdrop {
+    background-color: black;
+      opacity: 0.4;
+  }
+
+  .feedback-dialog{
+    margin: auto;
+    width: 35%;
+    height: 300px;
+    max-height: 50% ;
+    background-color: var(--card-col);
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+  }
+
+  .feedback-title{
+    color: var(--text-col);
+    margin: 20px 0px;
+  }
+
+  .star-div{
+    color: var(--text-col);
+    font-size: 30px;
+    margin: 20px 0px;
+  }
+  
+  .submit-feedback{
+    margin: 20px 0px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: var(--text-col);
+    background-color: var(--btn-col);
+  }
+
+  .feedback-input{
+    padding: 10px 20px;
+    width: 90%;
+    max-width: 100%;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    color: var(--text-col);
+    background-color: var(--bg-col);
+  }
+
+  .feedback-message{
+    width: 100%;
+  }
+
 
 #nav-bar{
     position: fixed;
@@ -391,7 +451,7 @@ body{
 
 
 
-@media screen and (min-width:860px) and (max-width:1150px) {
+/* @media screen and (min-width:860px) and (max-width:1150px) {
     .search-bar-opened{
         width:250px;
         transform:translateX(-130px);
@@ -405,15 +465,15 @@ body{
         transform:translateX(-100px);
         transition: all 500ms linear;
     }
-}
+} */
 
-@media screen and (max-width:676px) {
+/* @media screen and (max-width:676px) {
     .search-bar-opened{
         width:170px;
         transform:translateX(-90px);
         transition: all 500ms linear;
     }
-}
+} */
 
 
 
@@ -556,4 +616,33 @@ body{
     width: 75%;
 }
 
+.feedback-dialog{
+    min-width: 70%;
+  }
+
+  .feedback-title{
+    color: var(--text-col);
+    margin: 20px 0px;
+    font-size: 18px;
+  }
+
+  .feedback-input{
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width:1040px) {
+    .feedback-dialog{
+        width: 50%;
+      }
+    
+      .feedback-title{
+        color: var(--text-col);
+        margin: 20px 0px;
+      }
+    
+      .feedback-input{
+        width: 80%;
+      }
 }
