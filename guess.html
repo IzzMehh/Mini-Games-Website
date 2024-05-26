@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayZz - Guess</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="guess/guess.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  
+  <dialog class="feedback-dialog">
+    <form method="dialog">
+      <h2 class="feedback-title">Help us to improve more</h2>
+      <div class="star-div">
+        <ion-icon class="stars" name="star-outline" data-value="1"></ion-icon>
+        <ion-icon class="stars" name="star-outline" data-value="2"></ion-icon>
+        <ion-icon class="stars" name="star-outline" data-value="3"></ion-icon>
+        <ion-icon class="stars" name="star-outline" data-value="4"></ion-icon>
+        <ion-icon class="stars" name="star-outline" data-value="5"></ion-icon>
+      </div>
+
+      <div class="feedback-message">
+        <input type="text" class="feedback-input" placeholder="Your feedback helps us improve. Share your thoughts!">
+      </div>
+      <button class="submit-feedback">Sumbit</button>
+    </form>
+  </dialog>
+
+  <div class="container slide-property-hide" id="side-bar">
+    <div class="row" id="slider-content">
+      <div class="col-10 m-auto"><a href="index.html"><button id="home-btn" class="slider-tab-btn">Home</button></a></div>
+      <div class="col-10 m-auto"><a href="games.html"><button id="game-btn" class="slider-tab-btn active">Games</button></a></div>
+      <div class="col-10 m-auto"><a href="about.html" style="text-decoration: none;"><button id="about-btn" class="slider-tab-btn">About</button></a></div>   
+      <div class="col-10 m-auto"><button id="theme-toggle-btn" class="slider-tab-btn">Change Theme</button></div>
+      <div class="col-10 m-auto"><button id="feedback-btn" class="slider-tab-btn">Feed back</button></div>
+    </div>
+  </div>
+    
+  <div class="container-fluid" id="nav-bar">
+    <div class="row">
+      <div class="col-sm-1 col-0"><ion-icon id="slider-icon" name="reorder-three-outline"></ion-icon></div>
+        <div class="col-sm-1 col-2"><img id="website-logo" src="images/website-logo.png" alt=""> </div>
+        <div class="col-sm-8 col-10 text-center "><p id="cashAmount"><img id='nav-currency-logo' height="20px" src="images/currency-logo.jpg" alt=""> 2000 Coins</p></div>
+        <div class="col-sm-2 col-0" style="display: none;">
+          <form class="d-flex" role="search">
+            <input id="search-bar" autocomplete="off" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+    </div>
+  </div>
+
+      <div class="container-fluid" id="about-mines">
+        <div class="row">
+            <div class="col-12 text-center"><h1 class="sps-info-heading">guess</h1> </div>
+            <div class="col-12"> <h2>Gameplay</h2> </div>
+            <div class="col-12">
+              <ol>
+                <li> <b>Grid Layout:</b>
+                  <ul type="disc">
+                    <li>The game presents a grid of a specific size, with a certain number of mines hidden within the grid.</li>
+                    <li>The player's objective is to uncover squares that don't contain mines. Each square has an equal chance of containing a mine or being safe.</li>
+                  </ul>
+                </li>
+                <li class="info-box"> <b> Mine Count and Bets: </b>
+                  <ul type="disc">
+                    <li>Players can choose the number of mines to be hidden in the grid. A higher number of mines generally means a higher payout, but also a greater risk.</li>
+                    <li>Before starting the game, players place a bet. This bet is used to calculate the potential payout based on the number of safe squares uncovered and the number of mines.</li>
+                  </ul>
+                </li>
+                <li class="info-box">
+                   <b> Uncovering Squares: </b>
+                   <ul type="disc">
+                    <li>Players click on squares to reveal whether they contain a mine or are safe.</li>
+                    <li>If the square contains a mine, the game ends, and the player loses the bet.</li>
+                    <li>If the square is safe, the player can continue playing or cash out.</li>
+                   </ul>
+                </li>
+                <li class="info-box">
+                    <b>Cashing Out:</b>
+                    <ul type="disc">
+                        <li>At any point, players can choose to cash out and collect their winnings. The more squares they uncover without hitting a mine, the higher the payout.</li>
+                        <li>Cashing out can occur after every safe square uncovered, allowing players to balance risk and reward.</li>
+                    </ul>
+                </li>
+              </ol>
+            </div>
+            <div class="col-6 m-auto"><button type="button" id="start-btn" class="btn">Start !</button></div>        
+          </div>
+        </div>
+
+      
+      <div class="container-fluid section-2-dark"style="background-image: none; " id="section-2">
+        <div class="row" id="main-section-row">
+          <!-- section part 1 -->
+            <div class="col-lg-4 col-8 order-lg-0 order-2" id="user-controls">
+                <div class="row">
+                    <div class="col-lg-12 col-12 order-5" id="game-type">
+                        <div class="col-lg-10 col-12" id="btn-container">
+                        <p  class="game-type-btn game-type-active" id="manual-btn">Manual</p>
+                        <p class="game-type-btn" id="auto-btn">Auto</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- row 2 -->
+                <div class="row " style="margin-top: 10px;">
+                  <div class="col-lg-12 col-12">
+                    <div class="col-lg-10 m-auto amount-contaner">
+                    <label class="col-lg-12">Bet Amount </label>
+                    <div id="flex-inputImage">
+                    <input class="col-lg-7 amount-input" id="amt-input" type="number" name="">
+                    <div class="image" id="currency-logo">
+                    <img src="images/currency-logo.jpg" width="20px" height="20px" alt="">
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+
+                <div class="row" >
+                  <div class="col-lg-10 bet-container m-auto">
+                    <button id="bet-btn">Bet</button>
+                  </div>
+                </div>
+
+                <div class="row" >
+                  <div class="col-lg-10 bet-container m-auto">
+                    <button id="checkout-btn">CheckOut</button>
+                  </div>
+                </div>
+            </div>
+
+            
+            <div class="container col-lg-8 col-12 guess-container-style" id="guess-container">
+              
+              <div class="game-div-style col-12" id="game-div">
+                <div class="convo-div-wrapper" id="convo-div">
+                  
+                  <div class="bot-text-div">
+                    <div class="bot-profile">
+                      <img src="guess/imgs/botIcon.png" alt="" width="35px" height="25px">
+                      <div class="bot-name">Carl</div>
+                    </div>
+                    <div class="bot-text">
+                      Hello thie answer is 120x more nigga
+                    </div>
+                  </div>
+
+                  <div class="user-text-div">
+                    <div class="user-profile">
+                      <div class="user-name">User</div>
+                      <img src="guess/imgs/userIcon.png" alt="" width="25px" height="25px">
+                    </div>
+                    <div class="user-text">
+                      Hello thie answer is 120x more nigga
+                    </div>
+                  </div>
+
+                  
+
+
+                </div>
+                <div class="user-input-wrapper">
+                  <input type="text" class="user-input-style" id="number-input-box">
+                  <span class="send-icon"><ion-icon name="send"></ion-icon></span>
+                </div>
+              </div>
+
+
+                </div>
+
+      </div>
+    </div>
+
+
+
+      <div class="container-fluid">
+        <div class="row" id="footer-row">
+          <div class="col-12" id="mobile-buttons">
+            <a href="index.html"><img id="mobile-home-btn" class="buttons" src="svgs/home.svg" alt=""> </a>
+            <a href="about.html"><img id="mobile-about-btn" class="buttons" src="svgs/info-circle.svg" alt=""> </a>
+            <a href="#"> <img id="mobile-game-btn" class="buttons active" src="svgs/controller.svg" alt=""> </a>
+            <img id="mobile-theme-toggler" class="buttons" src="svgs/palette.svg" alt="">
+            <img id="mobile-feedback-btn" class="buttons" src="svgs/feedback.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   
+    <script src="utility/database.js"></script>
+    <script type="module" src="utility/script.js"></script>
+    <script type="module" src="guess/src/guess.js"></script>
+</body>
+</html>
