@@ -141,3 +141,7 @@ gameSearchBar()
 saveDataBeforeUnload(accountStoredData)
 
 
+// handle Feedbacks
+import { feedbackClass } from "./feedback.js"
+
+feedbackClass.FeedBackEvents()

@@ -5,9 +5,10 @@ const searchBar = document.querySelector('#game-page-input-id')
 
 export function gameSearchBar(){
   try{
-searchBar.addEventListener('click',()=>{
   searchBar.addEventListener('input',(event)=>{
-    const valueGiven = (event.target.value).toLowerCase();
+    let inputVal = event.target.value.replace(/[^A-Za-z\s]+/g, "");
+    const valueGiven = (inputVal).toLowerCase();
+    searchBar.value = inputVal
 
     gameTitle.forEach(element => {
       
@@ -21,7 +22,6 @@ searchBar.addEventListener('click',()=>{
       }
     });
   } )
-})
   }
   catch(e){
     console.log(e)
