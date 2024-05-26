@@ -50,4 +50,5 @@ export function winingAmountLogic() {
 
   quizDataStored.userData.amount += parseInt(Coins);
   localStorage.setItem("settings", JSON.stringify(quizDataStored));
+  updateDisplayedCoins()
 }
