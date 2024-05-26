@@ -175,7 +175,7 @@
     align-content: center;
     opacity: 1 !important;
     user-select: none;
-    /* z-index: 2; */
+    z-index: 2;
     overflow: auto;
 }
 
