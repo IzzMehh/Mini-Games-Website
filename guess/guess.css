@@ -5,14 +5,14 @@ body{
     background-color:var(--bg-col);
 }
 
-#about-mines{
-    display: none;
+#about-guess{
+    /* display: none; */
     padding-top: 70px;
     height: 100%;
     background-color: var(--bg-col)
 }
 
-#about-mines>.row{
+#about-guess>.row{
     max-width: 600px;
     margin: auto;
 }
@@ -28,7 +28,7 @@ body{
 }
 
 #section-2{
-    /* display: none; */
+    display: none;
     background-color: var(--bg-col);
     height:100%;
     padding: 60px 0px 0px 0px;
@@ -63,6 +63,7 @@ body{
     cursor: pointer;
     margin: 0px;
     width: 100%;
+    user-select: none;
 }
 
 .game-type-btn:hover{
@@ -232,7 +233,10 @@ body{
 }
 
 @media screen and (max-width:576px) {
-    .text{
+    .bot-text,.user-text{
+        font-size: 14px;
+    }
+    .game-type-btn{
         font-size: 13px;
     }
 

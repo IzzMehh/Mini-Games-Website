@@ -2,9 +2,8 @@ import { guessDataStored } from "./guess.js";
 import { isGameStarted } from "./betButton.js";
 
 export let amountToUse = 0
-const amountInput = document.querySelector('#amt-input')
+export const amountInput = document.querySelector('#amt-input')
 export const userChatInput = document.querySelector('#number-input-box')
-let isValid = true
 
 amountInput.value = 0
 export let userChatInputValue = 0
@@ -28,7 +27,6 @@ class inputHandlerClass {
     amountInputHandler(amount, inputDiv) {
         if (amount > guessDataStored.userData.amount) {
             amount = guessDataStored.userData.amount
-            isValid = true
             inputDiv.value = amount
         }
         amountToUse = Number(amount)

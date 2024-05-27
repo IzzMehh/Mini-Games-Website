@@ -1,4 +1,4 @@
-import { userChatInput, amountToUse, userChatInputValue, inputHandler } from "./inputHandler.js";
+import { userChatInput, amountToUse, userChatInputValue, inputHandler, amountInput } from "./inputHandler.js";
 import { logic } from "./logic.js";
 import { botChat, userChat, clearConvo, chatHandler } from "./gameHandler.js";
 import { guessDataStored } from "./guess.js";
@@ -13,7 +13,10 @@ export function betButtonFn() {
     betButton.addEventListener('click', () => {
         if (isGameStarted == false) {
 
+            inputHandler.amountInputHandler(amountToUse,amountInput)
+
             guessDataStored.userData.amount -= amountToUse
+            guessDataStored.userData.totalPlayed++
             localStorage.setItem('settings', JSON.stringify(guessDataStored))
             updateDisplayedCoins() //from utility
 
