@@ -16,6 +16,7 @@ export function betButtonFn() {
             inputHandler.amountInputHandler(amountToUse,amountInput)
 
             guessDataStored.userData.amount -= amountToUse
+            guessDataStored.userData.totalPlayed++
             localStorage.setItem('settings', JSON.stringify(guessDataStored))
             updateDisplayedCoins() //from utility
 

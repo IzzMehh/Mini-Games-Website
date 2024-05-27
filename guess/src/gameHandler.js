@@ -53,7 +53,9 @@ export function chatHandler(userChoice){
       botChat(`Oh! You're too farr from the number. Think of a bigger number than ${userChoice} (${15-totalTries} try's left)`)
     }
     else if(userChoice==valueSelected){
-      botChat(`Yay! You guessed it right! the number was: ${valueSelected} . You got it in just ${totalTries} Try and You won ${checkout(totalTries)} Coins`) 
+      botChat(`Yay! You guessed it right! the number was: ${valueSelected} . You got it in just ${totalTries} Try and You won ${checkout(totalTries)} Coins`)
+      guessDataStored.userData.wins++
+      localStorage.setItem('settings', JSON.stringify(guessDataStored)) 
     }
   autoScroll(chatDiv)
   inputHandler.timeoutToggle(false)
