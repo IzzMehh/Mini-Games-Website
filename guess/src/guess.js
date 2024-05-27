@@ -1,6 +1,8 @@
-import { amountInputFn } from "./amountInput.js";
-
+import { inputHandler } from "./inputHandler.js";
+import { betButtonFn } from "./betButton.js";
 
 export let guessDataStored = accountStoredData
 
-amountInputFn()
+inputHandler.amountInputFn()
+inputHandler.userChatInputFn()
+betButtonFn()

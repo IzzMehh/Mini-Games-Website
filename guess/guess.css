@@ -36,8 +36,13 @@ body{
 }
 
 
+#user-controls{
+    max-width: 400px;
+}
+
 #game-type{
     display: flex;
+    width: 376px;
 }
 
 #btn-container{
@@ -62,7 +67,7 @@ body{
 .game-type-btn:hover{
     width:50%;
     background-color: var(--bg-col)
-}
+ } 
 
 .game-type-active{
     width:50%;
@@ -150,7 +155,7 @@ body{
     align-items: center;
 }
 
-.user-input-wrapper>input{
+.user-input-style{
     background-color: var(--btn-col);
     outline: none;
     width: 100%;
@@ -159,6 +164,14 @@ body{
     border-radius: 5px;
     padding: 0px 10px;
     color: var(--text-col);
+}
+
+.user-input-style-not-allowed{
+    cursor: not-allowed;
+}
+
+.user-input-style::placeholder{
+    color: #00000058;
 }
 
 .send-icon{
@@ -221,4 +234,5 @@ body{
     .text{
         font-size: 13px;
     }
+
 }
