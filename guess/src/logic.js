@@ -5,5 +5,4 @@ export let valueSelected;
 
 export function logic(){
     valueSelected = randomValue()
-    console.log(valueSelected)
 }

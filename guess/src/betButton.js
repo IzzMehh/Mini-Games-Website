@@ -3,18 +3,15 @@ import { logic } from "./logic.js";
 import { botChat, userChat, clearConvo, chatHandler } from "./gameHandler.js";
 import { guessDataStored } from "./guess.js";
 import { timeOut } from "./inputHandler.js";
+import { autoScroll } from "./gameHandler.js";
 
 export let isGameStarted = false
 const betButton = document.querySelector('#bet-btn')
 
 export function betButtonFn() {
-    console.log(isGameStarted)
 
     betButton.addEventListener('click', () => {
         if (isGameStarted == false) {
-
-
-            console.log(amountToUse)
 
             guessDataStored.userData.amount -= amountToUse
             localStorage.setItem('settings', JSON.stringify(guessDataStored))
@@ -22,7 +19,7 @@ export function betButtonFn() {
 
             clearConvo()
             isGameStarted = true
-            console.log(isGameStarted)
+
             userChatInput.placeholder = "Value from 0 to 1000 are allowed"
             userChatInput.classList.remove('user-input-style-not-allowed')
             logic()
@@ -30,19 +27,19 @@ export function betButtonFn() {
 
             document.querySelector('#send-btn').addEventListener('click',()=>{
                 if(!timeOut && typeof userChatInputValue=="number"){
-                    console.log(userChatInputValue)
-                chatHandler(typeof userChatInputValue)
+                chatHandler(userChatInputValue)
                 inputHandler.clearUserChatInput()
                 }
             })
 
             userChatInput.addEventListener('keydown', (event)=> {
                 if (event.key === 'Enter' && isGameStarted && !timeOut && typeof userChatInputValue=="number") {
-                    console.log(typeof userChatInputValue)
                     chatHandler(userChatInputValue)
                     inputHandler.clearUserChatInput()
                 }
             });
+
+            window.scrollTo({top: 0, behavior: 'smooth'})
         }
     })
 }

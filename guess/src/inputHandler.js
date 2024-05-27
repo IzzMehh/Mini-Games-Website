@@ -37,8 +37,9 @@ class inputHandlerClass {
     userChatInputFn(){
         userChatInput.addEventListener('input',(event)=>{
             if(isGameStarted && !timeOut){
-                userChatInputValue = Number(event.target.value.replace(/\D/g, ''));
+            userChatInputValue = event.target.value.replace(/\D/g, '');
             event.target.value = userChatInputValue
+            userChatInputValue = Number(userChatInputValue)
             this.userChatInputHandler(userChatInputValue,event.target)
             }
             else{
