@@ -16,42 +16,44 @@ export function chatHandler(userChoice){
   userChat(userChoice)
   totalTries++
   inputHandler.timeoutToggle(true)
-  if(totalTries>15){
-    botChat(`Whoa, tough luck! You've hit the limit of 15 tries. You have lost your ${amountToUse} Coins. Better luck next time!`)
+  if(totalTries>=15 && userChoice!=valueSelected){
+    botChat(`Whoa, tough luck! You've hit the limit of 15 tries, the number was ${valueSelected}. You have lost your ${amountToUse} Coins. Better luck next time!`)
     checkout()
     totalTries = 0
+    
+    inputHandler.timeoutToggle(false)
   }
   else if(totalTries<=15){
   setTimeout(()=>{
     diffrence = Math.abs(userChoice-valueSelected)
 
     if(userChoice>valueSelected && diffrence<10){
-      botChat(`You're tooo close to the number. Think a little smaller number than ${userChoice} `)
+      botChat(`You're tooo close to the number. Think a little smaller number than ${userChoice}  (${15-totalTries} try's left)`)
     }
     else if(userChoice>valueSelected && diffrence<50){
-      botChat(`You're close to the number. Think of a smaller number than ${userChoice} `)
+      botChat(`You're close to the number. Think of a smaller number than ${userChoice}  (${15-totalTries} try's left)`)
     }
     else if(userChoice>valueSelected && diffrence<=100){
-      botChat(`You're went far the number. Think of a smaller number than ${userChoice} `)
+      botChat(`You're went far the number. Think of a smaller number than ${userChoice}  (${15-totalTries} try's left)`)
     }
     else if(userChoice>valueSelected && diffrence>100){
-      botChat(`Oh no! You went too far from the number. Think of a smaller number than ${userChoice}`)
+      botChat(`Oh no! You went too far from the number. Think of a smaller number than ${userChoice} (${15-totalTries} try's left)`)
     }
 
     else if(userChoice<valueSelected && diffrence<10){
-      botChat(`You're tooo close to the number. Think a little bigger number than ${userChoice} `)
+      botChat(`You're tooo close to the number. Think a little bigger number than ${userChoice}  (${15-totalTries} try's left)`)
     }
     else if(userChoice<valueSelected && diffrence<50){
-      botChat(`You're close to the number. Think of a bigger number than ${userChoice} `)
+      botChat(`You're close to the number. Think of a bigger number than ${userChoice}  (${15-totalTries} try's left)`)
     }
     else if(userChoice<valueSelected && diffrence<=100){
-      botChat(`You're little close to the number. Think of a bigger number than ${userChoice} `)
+      botChat(`You're little close to the number. Think of a bigger number than ${userChoice}  (${15-totalTries} try's left)`)
     }
     else if(userChoice<valueSelected && diffrence>100){
-      botChat(`Oh! You're too farr from the number. Think of a bigger number than ${userChoice}`)
+      botChat(`Oh! You're too farr from the number. Think of a bigger number than ${userChoice} (${15-totalTries} try's left)`)
     }
     else if(userChoice==valueSelected){
-      botChat("Yay! You guessed it right! the number was: "+ valueSelected + `. You got it in just ${totalTries} Try and You won ${checkout(totalTries)} Coins`) 
+      botChat(`Yay! You guessed it right! the number was: ${valueSelected} . You got it in just ${totalTries} Try and You won ${checkout(totalTries)} Coins`) 
     }
   autoScroll(chatDiv)
   inputHandler.timeoutToggle(false)

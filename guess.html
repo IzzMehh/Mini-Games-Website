@@ -59,39 +59,28 @@
     </div>
   </div>
 
-      <div class="container-fluid" id="about-mines">
+      <div class="container-fluid" id="about-guess">
         <div class="row">
-            <div class="col-12 text-center"><h1 class="sps-info-heading">guess</h1> </div>
+            <div class="col-12 text-center"><h1 class="sps-info-heading">Guess The Number</h1> </div>
             <div class="col-12"> <h2>Gameplay</h2> </div>
             <div class="col-12">
               <ol>
-                <li> <b>Grid Layout:</b>
+                <li> <b>How to play</b>
                   <ul type="disc">
-                    <li>The game presents a grid of a specific size, with a certain number of mines hidden within the grid.</li>
-                    <li>The player's objective is to uncover squares that don't contain mines. Each square has an equal chance of containing a mine or being safe.</li>
+                    <li>The computer will randomly select a number from 0-1000 and the user have to find it out. <br><br> </li>
+                    <li>If the user find out the number in 15 try's he will be considered as winner and will get price on the basis of price distribution. <br><br> </li>
+                    <li>Computer will help the user to figure out the hidden number. <br><br></li>
                   </ul>
                 </li>
-                <li class="info-box"> <b> Mine Count and Bets: </b>
+
+                <li> <b>Price Distribution</b>
                   <ul type="disc">
-                    <li>Players can choose the number of mines to be hidden in the grid. A higher number of mines generally means a higher payout, but also a greater risk.</li>
-                    <li>Before starting the game, players place a bet. This bet is used to calculate the potential payout based on the number of safe squares uncovered and the number of mines.</li>
+                    <li>If the user find out the number under 5 try's he will get 2x of the amount he betted. <br><br> </li>
+                    <li>If the user find out the number after 5 try's he will get 1.5x of the amount he betted. <br><br> </li>
+                    <li>If the user didn't find out the number under 15 try's he will lose all the coin's he betted.</li>
                   </ul>
                 </li>
-                <li class="info-box">
-                   <b> Uncovering Squares: </b>
-                   <ul type="disc">
-                    <li>Players click on squares to reveal whether they contain a mine or are safe.</li>
-                    <li>If the square contains a mine, the game ends, and the player loses the bet.</li>
-                    <li>If the square is safe, the player can continue playing or cash out.</li>
-                   </ul>
-                </li>
-                <li class="info-box">
-                    <b>Cashing Out:</b>
-                    <ul type="disc">
-                        <li>At any point, players can choose to cash out and collect their winnings. The more squares they uncover without hitting a mine, the higher the payout.</li>
-                        <li>Cashing out can occur after every safe square uncovered, allowing players to balance risk and reward.</li>
-                    </ul>
-                </li>
+                
               </ol>
             </div>
             <div class="col-6 m-auto"><button type="button" id="start-btn" class="btn">Start !</button></div>        
