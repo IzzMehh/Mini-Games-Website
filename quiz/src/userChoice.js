@@ -74,7 +74,6 @@ export function userChoice() {
         element.style.backgroundColor = '#D60E0E'
 
         let allRightOption = document.querySelectorAll(`.option${rightOption[0]}`)
-        console.log(allRightOption)
         allRightOption.forEach((option)=>{
             if(!option.clicked){
                 option.style.backgroundColor = '#12F80F'

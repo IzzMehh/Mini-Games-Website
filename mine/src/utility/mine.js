@@ -186,7 +186,6 @@ startBtn.addEventListener('click', () =>{
 
         
         document.querySelector('#mine-container').style.display ='block'
-        console.log(wonAmount)
     
         mineDataStored.userData.amount += wonAmount
         mineDataStored.userData.wins++
