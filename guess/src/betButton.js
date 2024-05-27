@@ -23,7 +23,7 @@ export function betButtonFn() {
             userChatInput.placeholder = "Value from 0 to 1000 are allowed"
             userChatInput.classList.remove('user-input-style-not-allowed')
             logic()
-            botChat('I have chosen a number from 0 to 1000. Now you have to guess it in the next 20 tries, or you lose your bet!')
+            botChat('I have chosen a number from 0 to 1000. Now you have to guess it in the next 15 tries, or you lose your bet!')
 
             document.querySelector('#send-btn').addEventListener('click',()=>{
                 if(!timeOut && typeof userChatInputValue=="number"){
