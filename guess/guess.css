@@ -1,0 +1,238 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    background-color:var(--bg-col);
+}
+
+#about-mines{
+    display: none;
+    padding-top: 70px;
+    height: 100%;
+    background-color: var(--bg-col)
+}
+
+#about-mines>.row{
+    max-width: 600px;
+    margin: auto;
+}
+
+.info-box{
+    margin-top: 15px;
+}
+
+#start-btn{
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: var(--btn-col);
+}
+
+#section-2{
+    /* display: none; */
+    background-color: var(--bg-col);
+    height:100%;
+    padding: 60px 0px 0px 0px;
+    overflow-x: hidden;
+}
+
+
+#user-controls{
+    max-width: 400px;
+}
+
+#game-type{
+    display: flex;
+    width: 376px;
+}
+
+#btn-container{
+    width: 85%;
+    display: flex;
+    margin: auto;
+    background-color: var(--btn-col);
+    border-radius: 30px;
+    align-items: center;
+    text-align: center;
+    padding: 3px 3px;
+}
+
+.game-type-btn{
+    padding: 10px 13%;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0px;
+    width: 50%;
+}
+
+.game-type-btn:hover{
+    width:50%;
+    background-color: var(--bg-col)
+ } 
+
+.game-type-active{
+    width:50%;
+    background-color: var(--bg-col);
+}
+
+.amount-input{
+    color: white;
+    outline: 2px solid rgba(98, 96, 96, 0.689);
+    border: none;
+    background-color: var(--btn-col);
+    padding: 5px 30px 5px 5px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.amount-input:hover{
+    border: 2px solid white;
+}
+
+#flex-inputImage{
+    display: flex;
+}
+
+#currency-logo{
+   position: relative;
+   left:-27px;
+   top: 3px;
+}
+
+
+.amount-contaner>label{
+    color: var(--text-col);
+}
+
+#currency-logo>img{
+    border-radius: 40px;
+}
+
+
+#bet-btn,#checkout-btn{
+    background-color: rgb(31, 255, 32);
+    width: 90%;
+    outline: none;
+    padding: 15px 28px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+#checkout-btn{
+    display: none;
+}
+
+#bet-btn:hover{
+    background-color: rgb(27, 236, 27);
+}
+
+.guess-container-style{
+    align-content: center;
+    height: 620px;
+    background-color: var(--card-col);
+}
+
+.game-div-style{
+    height: 98%;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: var(--btn-col);
+}
+
+.convo-div-wrapper{
+    height: 95%;
+    background-color: var(--btn-col);
+    padding: 5px 15px;
+    overflow: auto;
+}
+
+.user-input-wrapper{
+    height: 5%;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.user-input-style{
+    background-color: var(--btn-col);
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--text-col);
+    border-radius: 5px;
+    padding: 0px 10px;
+    color: var(--text-col);
+}
+
+.user-input-style-not-allowed{
+    cursor: not-allowed;
+}
+
+.user-input-style::placeholder{
+    color: #00000058;
+}
+
+.send-icon{
+    position: absolute;
+    margin-right: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.bot-text-div{
+    background-color: var(--card-col);
+    padding: 10px 0px;
+    margin: 0px 0px 10px 0px;
+}
+
+.bot-profile{
+    display: flex;
+    user-select: none;
+}
+
+.bot-name{
+    font-size: 15px;
+    color: var(--bg-col);
+}
+
+.bot-text{
+    font-size: 16px;
+    padding: 0px 35px;
+}
+
+.user-text-div{
+    background-color: var(--card-col);
+    text-align: end;
+    padding: 10px 0px;
+    margin: 0px 0px 10px 0px;
+}
+
+.user-profile{
+    display: flex;
+    justify-content: right;
+    user-select: none;
+}
+
+.user-name{
+    padding-right:3px;
+    font-size: 15px;
+    color: var(--bg-col);
+}
+
+.user-profile>img{
+    margin-right: 5px;
+}
+
+.user-text{
+    font-size: 16px;
+    padding: 0px 35px;
+}
+
+@media screen and (max-width:576px) {
+    .text{
+        font-size: 13px;
+    }
+
+}

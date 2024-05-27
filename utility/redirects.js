@@ -46,3 +46,15 @@ try{
 catch(e){
   console.log(e)
 }
+
+
+const guess = document.querySelector('#guess')
+
+try{
+  guess.addEventListener('click',()=>{
+    window.location.assign('guess.html')
+})
+}
+catch(e){
+  console.log(e)
+}
