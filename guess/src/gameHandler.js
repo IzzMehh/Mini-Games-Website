@@ -1,5 +1,5 @@
 import { valueSelected } from "./logic.js";
-import { isGameStarted } from "./betButton.js";
+import { betButton } from "./betButton.js";
 import { checkout } from "./checkout.js";
 import { amountToUse, inputHandler } from "./inputHandler.js";
 import { guessDataStored } from "./guess.js";
@@ -11,6 +11,7 @@ let totalTries = 0
 
 const numberFoundSound = new Audio("guess/src/sound/success-48018.mp3")
 const chanceEnd = new Audio("guess/src/sound/negative_beeps-6008.mp3")
+
 
 export function autoScroll(Div) {
   Div.scrollTop = Div.scrollHeight;
@@ -27,6 +28,7 @@ export function chatHandler(userChoice){
     totalTries = 0
     
     inputHandler.timeoutToggle(false)
+    betButton.innerText = 'Bet'
   }
   else if(totalTries<=15){
   setTimeout(()=>{
@@ -62,6 +64,7 @@ export function chatHandler(userChoice){
       botChat(`Yay! You guessed it right! the number was: ${valueSelected} . You got it in just ${totalTries} Try and You won ${checkout(totalTries)} Coins`)
       guessDataStored.userData.wins++
       localStorage.setItem('settings', JSON.stringify(guessDataStored))
+      betButton.innerText = 'Bet'
     }
   autoScroll(chatDiv)
   inputHandler.timeoutToggle(false)

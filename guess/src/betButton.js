@@ -1,17 +1,18 @@
 import { userChatInput, amountToUse, userChatInputValue, inputHandler, amountInput } from "./inputHandler.js";
 import { logic } from "./logic.js";
-import { botChat, userChat, clearConvo, chatHandler } from "./gameHandler.js";
+import { botChat, clearConvo, chatHandler } from "./gameHandler.js";
 import { guessDataStored } from "./guess.js";
 import { timeOut } from "./inputHandler.js";
-import { autoScroll } from "./gameHandler.js";
 
 export let isGameStarted = false
-const betButton = document.querySelector('#bet-btn')
+export const betButton = document.querySelector('#bet-btn')
 
 export function betButtonFn() {
 
     betButton.addEventListener('click', () => {
         if (isGameStarted == false) {
+
+            betButton.innerText = 'Game Started !'
 
             inputHandler.amountInputHandler(amountToUse,amountInput)
 

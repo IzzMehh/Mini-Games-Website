@@ -1,5 +1,4 @@
 import { gameToggler } from "./betButton.js";
-import { clearConvo } from "./gameHandler.js";
 import { amountToUse } from "./inputHandler.js";
 import { guessDataStored } from "./guess.js";
 import { userChatInput } from "./inputHandler.js";
