@@ -25,6 +25,7 @@ export function shuffle(optionShuffledArray, questionArray, apiData){
                     tempArr.push(num)
                     rightOption = []
                     rightOption.push(tempArr.indexOf(num))
+                    console.log(rightOption[0])
                     break
                 case 4:
                     optionShuffledArray.push((apiData.results[questionArray[index]]).incorrect_answers[2])

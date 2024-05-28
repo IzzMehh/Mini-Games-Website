@@ -20,18 +20,17 @@ export function checkoutLogic() {
 
   helpButtonFunctions.reset()
   
-  if (div==null) {
     div = document.createElement("button");
     div.innerText = "Play Again";
     div.classList.add("retry-btn-style");
     div.id = "retry-btn";
     displayDiv.appendChild(div);
-  }
 
   document.querySelector("#retry-btn").addEventListener("click", () => {
     let allQuestions = document.querySelectorAll("#question-div>.q-wrapper");
     allQuestions.forEach((question) => question.remove());
     playImg.click();
+    document.querySelector("#retry-btn").remove()
   });
 }
 
