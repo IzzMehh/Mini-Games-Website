@@ -450,7 +450,23 @@ body{
 }
 
 
+.github-btn{
+    width: none;
+    background-color: var(--btn-col);
+    color: var(--text-col);
+    border-radius: 40px;
+    border: none;
+    margin-left:10px ;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
 
+.github-btn:hover{
+    background-color: var(--card-col);
+}
 
 /* @media screen and (min-width:860px) and (max-width:1150px) {
     .search-bar-opened{
@@ -606,6 +622,7 @@ body{
 .buttons:active{
     background-color: rgb(171, 165, 165);
 }
+
 
 #toggle-bg{
     height: 35px;
